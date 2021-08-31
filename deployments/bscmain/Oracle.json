@@ -1,0 +1,213 @@
+{
+  "address": "0x0E3c939cc14e5797aEaF7718210A8e94F20BA374",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "factory_",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "CYCLE",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenIn",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountIn",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "tokenOut",
+          "type": "address"
+        }
+      ],
+      "name": "consult",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountOut",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "factory",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "pairObservations",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "price0Cumulative",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "price1Cumulative",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenA",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "tokenB",
+          "type": "address"
+        }
+      ],
+      "name": "update",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xaa5923242ffc34c472efea993caf9373129f6056ebc70a9c44b5401bfadca0c5",
+  "receipt": {
+    "to": null,
+    "from": "0x1A3ef1062B4BB66AAC680eFdd11745daC8f92FcF",
+    "contractAddress": "0x0E3c939cc14e5797aEaF7718210A8e94F20BA374",
+    "transactionIndex": 46,
+    "gasUsed": "588444",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xd727ba3e5299b1633dc8538c9a5515d826ff924a73a587e56863b5008979c4bd",
+    "transactionHash": "0xaa5923242ffc34c472efea993caf9373129f6056ebc70a9c44b5401bfadca0c5",
+    "logs": [],
+    "blockNumber": 10257033,
+    "cumulativeGasUsed": "7231892",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x1f598e9D022e5df76070Bea8BC94E0347f56e567"
+  ],
+  "solcInputHash": "d2da3992c7ce11c5ac8aac23ec92f50f",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"factory_\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"CYCLE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenIn\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"tokenOut\",\"type\":\"address\"}],\"name\":\"consult\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amountOut\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"factory\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"pairObservations\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"price0Cumulative\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"price1Cumulative\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenA\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tokenB\",\"type\":\"address\"}],\"name\":\"update\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/swapmining/Oracle.sol\":\"Oracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/math/SafeMath.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity >=0.6.0 <0.8.0;\\n\\n/**\\n * @dev Wrappers over Solidity's arithmetic operations with added overflow\\n * checks.\\n *\\n * Arithmetic operations in Solidity wrap on overflow. This can easily result\\n * in bugs, because programmers usually assume that an overflow raises an\\n * error, which is the standard behavior in high level programming languages.\\n * `SafeMath` restores this intuition by reverting the transaction when an\\n * operation overflows.\\n *\\n * Using this library instead of the unchecked operations eliminates an entire\\n * class of bugs, so it's recommended to use it always.\\n */\\nlibrary SafeMath {\\n    /**\\n     * @dev Returns the addition of two unsigned integers, with an overflow flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryAdd(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        uint256 c = a + b;\\n        if (c < a) return (false, 0);\\n        return (true, c);\\n    }\\n\\n    /**\\n     * @dev Returns the substraction of two unsigned integers, with an overflow flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function trySub(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        if (b > a) return (false, 0);\\n        return (true, a - b);\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, with an overflow flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryMul(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\\n        // benefit is lost if 'b' is also tested.\\n        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\\n        if (a == 0) return (true, 0);\\n        uint256 c = a * b;\\n        if (c / a != b) return (false, 0);\\n        return (true, c);\\n    }\\n\\n    /**\\n     * @dev Returns the division of two unsigned integers, with a division by zero flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryDiv(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        if (b == 0) return (false, 0);\\n        return (true, a / b);\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers, with a division by zero flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryMod(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        if (b == 0) return (false, 0);\\n        return (true, a % b);\\n    }\\n\\n    /**\\n     * @dev Returns the addition of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `+` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Addition cannot overflow.\\n     */\\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\\n        uint256 c = a + b;\\n        require(c >= a, \\\"SafeMath: addition overflow\\\");\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\\n        require(b <= a, \\\"SafeMath: subtraction overflow\\\");\\n        return a - b;\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `*` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Multiplication cannot overflow.\\n     */\\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\\n        if (a == 0) return 0;\\n        uint256 c = a * b;\\n        require(c / a == b, \\\"SafeMath: multiplication overflow\\\");\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers, reverting on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\\n        require(b > 0, \\\"SafeMath: division by zero\\\");\\n        return a / b;\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * reverting when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\\n        require(b > 0, \\\"SafeMath: modulo by zero\\\");\\n        return a % b;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting with custom message on\\n     * overflow (when the result is negative).\\n     *\\n     * CAUTION: This function is deprecated because it requires allocating memory for the error\\n     * message unnecessarily. For custom revert reasons use {trySub}.\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b <= a, errorMessage);\\n        return a - b;\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers, reverting with custom message on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * CAUTION: This function is deprecated because it requires allocating memory for the error\\n     * message unnecessarily. For custom revert reasons use {tryDiv}.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b > 0, errorMessage);\\n        return a / b;\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * reverting with custom message when dividing by zero.\\n     *\\n     * CAUTION: This function is deprecated because it requires allocating memory for the error\\n     * message unnecessarily. For custom revert reasons use {tryMod}.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b > 0, errorMessage);\\n        return a % b;\\n    }\\n}\\n\",\"keccak256\":\"0xcc78a17dd88fa5a2edc60c8489e2f405c0913b377216a5b26b35656b2d0dab52\",\"license\":\"MIT\"},\"contracts/interfaces/IGIBXFactory.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity 0.7.6;\\n\\ninterface IGIBXFactory {\\n    event PairCreated(address indexed token0, address indexed token1, address pair, uint);\\n\\n    function feeTo() external view returns (address);\\n    function feeToSetter() external view returns (address);\\n\\n    function getPair(address tokenA, address tokenB) external view returns (address pair);\\n    function expectPairFor(address token0, address token1) external view returns (address);\\n    function allPairs(uint) external view returns (address pair);\\n    function allPairsLength() external view returns (uint);\\n\\n    function createPair(address tokenA, address tokenB) external returns (address pair);\\n\\n    function setFeeTo(address) external;\\n    function setFeeToSetter(address) external;\\n\\n    function INIT_CODE_PAIR_HASH() external pure returns (bytes32);\\n}\\n\",\"keccak256\":\"0xd0136ccf43a00e9067298b4258e2f04da4a69579398271291afa6d11d88875c6\",\"license\":\"MIT\"},\"contracts/interfaces/IGIBXPair.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity 0.7.6;\\n\\ninterface IGIBXPair {\\n    event Approval(address indexed owner, address indexed spender, uint value);\\n    event Transfer(address indexed from, address indexed to, uint value);\\n\\n    function name() external pure returns (string memory);\\n    function symbol() external pure returns (string memory);\\n    function decimals() external pure returns (uint8);\\n    function totalSupply() external view returns (uint);\\n    function balanceOf(address owner) external view returns (uint);\\n    function allowance(address owner, address spender) external view returns (uint);\\n\\n    function approve(address spender, uint value) external returns (bool);\\n    function transfer(address to, uint value) external returns (bool);\\n    function transferFrom(address from, address to, uint value) external returns (bool);\\n\\n    function DOMAIN_SEPARATOR() external view returns (bytes32);\\n    function PERMIT_TYPEHASH() external pure returns (bytes32);\\n    function nonces(address owner) external view returns (uint);\\n\\n    function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external;\\n\\n    event Mint(address indexed sender, uint amount0, uint amount1);\\n    event Burn(address indexed sender, uint amount0, uint amount1, address indexed to);\\n    event Swap(\\n        address indexed sender,\\n        uint amount0In,\\n        uint amount1In,\\n        uint amount0Out,\\n        uint amount1Out,\\n        address indexed to\\n    );\\n    event Sync(uint112 reserve0, uint112 reserve1);\\n\\n    function MINIMUM_LIQUIDITY() external pure returns (uint);\\n    function factory() external view returns (address);\\n    function token0() external view returns (address);\\n    function token1() external view returns (address);\\n    function getReserves() external view returns (uint112 reserve0, uint112 reserve1, uint32 blockTimestampLast);\\n    function price0CumulativeLast() external view returns (uint);\\n    function price1CumulativeLast() external view returns (uint);\\n    function kLast() external view returns (uint);\\n\\n    function mint(address to) external returns (uint liquidity);\\n    function burn(address to) external returns (uint amount0, uint amount1);\\n    function swap(uint amount0Out, uint amount1Out, address to, bytes calldata data) external;\\n    function skim(address to) external;\\n    function sync() external;\\n\\n    function initialize(address, address) external;\\n}\\n\",\"keccak256\":\"0x9cab1bb4fc6fdc349f5d6290baf5b28e1e554115bffa78740f82423456b3754b\",\"license\":\"MIT\"},\"contracts/libraries/FixedPoint.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\n\\npragma solidity 0.7.6;\\n\\nlibrary FixedPoint {\\n    // range: [0, 2**112 - 1]\\n    // resolution: 1 / 2**112\\n    struct uq112x112 {\\n        uint224 _x;\\n    }\\n\\n    // range: [0, 2**144 - 1]\\n    // resolution: 1 / 2**112\\n    struct uq144x112 {\\n        uint _x;\\n    }\\n\\n    uint8 private constant RESOLUTION = 112;\\n\\n    // encode a uint112 as a UQ112x112\\n    function encode(uint112 x) internal pure returns (uq112x112 memory) {\\n        return uq112x112(uint224(x) << RESOLUTION);\\n    }\\n\\n    // encodes a uint144 as a UQ144x112\\n    function encode144(uint144 x) internal pure returns (uq144x112 memory) {\\n        return uq144x112(uint256(x) << RESOLUTION);\\n    }\\n\\n    // divide a UQ112x112 by a uint112, returning a UQ112x112\\n    function div(uq112x112 memory self, uint112 x) internal pure returns (uq112x112 memory) {\\n        require(x != 0, 'FixedPoint: DIV_BY_ZERO');\\n        return uq112x112(self._x / uint224(x));\\n    }\\n\\n    // multiply a UQ112x112 by a uint, returning a UQ144x112\\n    // reverts on overflow\\n    function mul(uq112x112 memory self, uint y) internal pure returns (uq144x112 memory) {\\n        uint z;\\n        require(y == 0 || (z = uint(self._x) * y) / y == uint(self._x), \\\"FixedPoint: MULTIPLICATION_OVERFLOW\\\");\\n        return uq144x112(z);\\n    }\\n\\n    // returns a UQ112x112 which represents the ratio of the numerator to the denominator\\n    // equivalent to encode(numerator).div(denominator)\\n    function fraction(uint112 numerator, uint112 denominator) internal pure returns (uq112x112 memory) {\\n        require(denominator > 0, \\\"FixedPoint: DIV_BY_ZERO\\\");\\n        return uq112x112((uint224(numerator) << RESOLUTION) / denominator);\\n    }\\n\\n    // decode a UQ112x112 into a uint112 by truncating after the radix point\\n    function decode(uq112x112 memory self) internal pure returns (uint112) {\\n        return uint112(self._x >> RESOLUTION);\\n    }\\n\\n    // decode a UQ144x112 into a uint144 by truncating after the radix point\\n    function decode144(uq144x112 memory self) internal pure returns (uint144) {\\n        return uint144(self._x >> RESOLUTION);\\n    }\\n}\\n\",\"keccak256\":\"0xceec12d1fcb63760d97f2c619b24c240dca7445352b4889b529d93e82e3d3e2e\",\"license\":\"MIT\"},\"contracts/libraries/GIBXLibrary.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity 0.7.6;\\n\\nimport '@openzeppelin/contracts/math/SafeMath.sol';\\nimport '../interfaces/IGIBXPair.sol';\\nimport '../interfaces/IGIBXFactory.sol';\\n\\nlibrary GIBXLibrary {\\n    using SafeMath for uint;\\n\\n    uint256 constant SWAP_FEE = 3;\\n    uint256 constant SWAP_FEE_BASE = 1000;\\n    uint256 constant SWAP_FEE_LP = 2;\\n\\n    // returns sorted token addresses, used to handle return values from pairs sorted in this order\\n    function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1) {\\n        require(tokenA != tokenB, 'PancakeLibrary: IDENTICAL_ADDRESSES');\\n        (token0, token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);\\n        require(token0 != address(0), 'PancakeLibrary: ZERO_ADDRESS');\\n    }\\n\\n    // calculates the CREATE2 address for a pair without making any external calls\\n    function pairFor(address factory, address tokenA, address tokenB) internal pure returns (address pair) {\\n        (address token0, address token1) = sortTokens(tokenA, tokenB);\\n        pair = address(uint(keccak256(abi.encodePacked(\\n                hex'ff',\\n                factory,\\n                keccak256(abi.encodePacked(token0, token1)),\\n                IGIBXFactory(factory).INIT_CODE_PAIR_HASH()\\n            ))));\\n    }\\n\\n    // fetches and sorts the reserves for a pair\\n    function getReserves(address factory, address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB) {\\n        (address token0,) = sortTokens(tokenA, tokenB);\\n        pairFor(factory, tokenA, tokenB);\\n        (uint reserve0, uint reserve1,) = IGIBXPair(pairFor(factory, tokenA, tokenB)).getReserves();\\n        (reserveA, reserveB) = tokenA == token0 ? (reserve0, reserve1) : (reserve1, reserve0);\\n    }\\n\\n    // given some amount of an asset and pair reserves, returns an equivalent amount of the other asset\\n    function quote(uint amountA, uint reserveA, uint reserveB) internal pure returns (uint amountB) {\\n        require(amountA > 0, 'PancakeLibrary: INSUFFICIENT_AMOUNT');\\n        require(reserveA > 0 && reserveB > 0, 'PancakeLibrary: INSUFFICIENT_LIQUIDITY');\\n        amountB = amountA.mul(reserveB) / reserveA;\\n    }\\n\\n    // given an input amount of an asset and pair reserves, returns the maximum output amount of the other asset\\n    function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {\\n        require(amountIn > 0, 'PancakeLibrary: INSUFFICIENT_INPUT_AMOUNT');\\n        require(reserveIn > 0 && reserveOut > 0, 'PancakeLibrary: INSUFFICIENT_LIQUIDITY');\\n        uint amountInWithFee = amountIn.mul(SWAP_FEE_BASE.sub(SWAP_FEE));\\n        uint numerator = amountInWithFee.mul(reserveOut);\\n        uint denominator = reserveIn.mul(SWAP_FEE_BASE).add(amountInWithFee);\\n        amountOut = numerator / denominator;\\n    }\\n\\n    // given an output amount of an asset and pair reserves, returns a required input amount of the other asset\\n    function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn) {\\n        require(amountOut > 0, 'PancakeLibrary: INSUFFICIENT_OUTPUT_AMOUNT');\\n        require(reserveIn > 0 && reserveOut > 0, 'PancakeLibrary: INSUFFICIENT_LIQUIDITY');\\n        uint numerator = reserveIn.mul(amountOut).mul(SWAP_FEE_BASE);\\n        uint denominator = reserveOut.sub(amountOut).mul(SWAP_FEE_BASE.sub(SWAP_FEE));\\n        amountIn = (numerator / denominator).add(1);\\n    }\\n\\n    // performs chained getAmountOut calculations on any number of pairs\\n    function getAmountsOut(address factory, uint amountIn, address[] memory path) internal view returns (uint[] memory amounts) {\\n        require(path.length >= 2, 'PancakeLibrary: INVALID_PATH');\\n        amounts = new uint[](path.length);\\n        amounts[0] = amountIn;\\n        for (uint i; i < path.length - 1; i++) {\\n            (uint reserveIn, uint reserveOut) = getReserves(factory, path[i], path[i + 1]);\\n            amounts[i + 1] = getAmountOut(amounts[i], reserveIn, reserveOut);\\n        }\\n    }\\n\\n    // performs chained getAmountIn calculations on any number of pairs\\n    function getAmountsIn(address factory, uint amountOut, address[] memory path) internal view returns (uint[] memory amounts) {\\n        require(path.length >= 2, 'PancakeLibrary: INVALID_PATH');\\n        amounts = new uint[](path.length);\\n        amounts[amounts.length - 1] = amountOut;\\n        for (uint i = path.length - 1; i > 0; i--) {\\n            (uint reserveIn, uint reserveOut) = getReserves(factory, path[i - 1], path[i]);\\n            amounts[i - 1] = getAmountIn(amounts[i], reserveIn, reserveOut);\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x4c6ea123178baf908c86fcc0a49a8263d12d4f5c6b8f6a3ea53826510fb87d79\",\"license\":\"MIT\"},\"contracts/libraries/OracleLibrary.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\n\\npragma solidity 0.7.6;\\n\\nimport '../interfaces/IGIBXPair.sol';\\nimport './FixedPoint.sol';\\n\\nlibrary OracleLibrary {\\n    using FixedPoint for *;\\n\\n    // helper function that returns the current block timestamp within the range of uint32, i.e. [0, 2**32 - 1]\\n    function currentBlockTimestamp() internal view returns (uint32) {\\n        return uint32(block.timestamp % 2 ** 32);\\n    }\\n\\n    // produces the cumulative price using counterfactuals to save gas and avoid a call to sync.\\n    function currentCumulativePrices(\\n        address pair\\n    ) internal view returns (uint price0Cumulative, uint price1Cumulative, uint32 blockTimestamp) {\\n        blockTimestamp = currentBlockTimestamp();\\n        price0Cumulative = IGIBXPair(pair).price0CumulativeLast();\\n        price1Cumulative = IGIBXPair(pair).price1CumulativeLast();\\n\\n        // if time has elapsed since the last update on the pair, mock the accumulated price values\\n        (uint112 reserve0, uint112 reserve1, uint32 blockTimestampLast) = IGIBXPair(pair).getReserves();\\n        if (blockTimestampLast != blockTimestamp) {\\n            // subtraction overflow is desired\\n            uint32 timeElapsed = blockTimestamp - blockTimestampLast;\\n            // addition overflow is desired\\n            // counterfactual\\n            price0Cumulative += uint(FixedPoint.fraction(reserve1, reserve0)._x) * timeElapsed;\\n            // counterfactual\\n            price1Cumulative += uint(FixedPoint.fraction(reserve0, reserve1)._x) * timeElapsed;\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x4154a10b467a7fd453a905e2c520cb49abb1440c53b45ac5338526c8970617f1\",\"license\":\"MIT\"},\"contracts/swapmining/Oracle.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity 0.7.6;\\n\\nimport \\\"../libraries/OracleLibrary.sol\\\";\\nimport \\\"../interfaces/IGIBXFactory.sol\\\";\\nimport \\\"../libraries/GIBXLibrary.sol\\\";\\nimport '../libraries/FixedPoint.sol';\\nimport \\\"../interfaces/IGIBXPair.sol\\\";\\n\\ncontract Oracle {\\n    using FixedPoint for *;\\n    using SafeMath for uint;\\n\\n    struct Observation {\\n        uint timestamp;\\n        uint price0Cumulative;\\n        uint price1Cumulative;\\n    }\\n\\n    address public immutable factory;\\n    uint public constant CYCLE = 30 minutes;\\n\\n    // mapping from pair address to a list of price observations of that pair\\n    mapping(address => Observation) public pairObservations;\\n\\n    constructor(address factory_) {\\n        factory = factory_;\\n    }\\n\\n\\n    function update(address tokenA, address tokenB) external {\\n        if (IGIBXFactory(factory).getPair(tokenA, tokenB) == address(0)) {\\n            return;\\n        }\\n        address pair = IGIBXFactory(factory).expectPairFor(tokenA, tokenB);\\n\\n        Observation storage observation = pairObservations[pair];\\n        uint timeElapsed = block.timestamp - observation.timestamp;\\n        require(timeElapsed >= CYCLE, 'MDEXOracle: PERIOD_NOT_ELAPSED');\\n        (uint price0Cumulative, uint price1Cumulative,) = OracleLibrary.currentCumulativePrices(pair);\\n        observation.timestamp = block.timestamp;\\n        observation.price0Cumulative = price0Cumulative;\\n        observation.price1Cumulative = price1Cumulative;\\n    }\\n\\n\\n    function computeAmountOut(\\n        uint priceCumulativeStart, uint priceCumulativeEnd,\\n        uint timeElapsed, uint amountIn\\n    ) private pure returns (uint amountOut) {\\n        // overflow is desired.\\n        FixedPoint.uq112x112 memory priceAverage = FixedPoint.uq112x112(\\n            uint224((priceCumulativeEnd - priceCumulativeStart) / timeElapsed)\\n        );\\n        amountOut = priceAverage.mul(amountIn).decode144();\\n    }\\n\\n\\n    function consult(address tokenIn, uint amountIn, address tokenOut) external view returns (uint amountOut) {\\n        address pair = IGIBXFactory(factory).expectPairFor(tokenIn, tokenOut);\\n        Observation storage observation = pairObservations[pair];\\n        uint timeElapsed = block.timestamp - observation.timestamp;\\n        (uint price0Cumulative, uint price1Cumulative,) = OracleLibrary.currentCumulativePrices(pair);\\n        (address token0,) = GIBXLibrary.sortTokens(tokenIn, tokenOut);\\n\\n        if (token0 == tokenIn) {\\n            return computeAmountOut(observation.price0Cumulative, price0Cumulative, timeElapsed, amountIn);\\n        } else {\\n            return computeAmountOut(observation.price1Cumulative, price1Cumulative, timeElapsed, amountIn);\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x01131b553fae2296636e3ac3bdd5898cf68bffa28b1f543857586afdf9d5121a\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60a060405234801561001057600080fd5b50604051610a23380380610a238339818101604052602081101561003357600080fd5b5051606081901b6001600160601b0319166080526001600160a01b03166109ad6100766000398061016a52806102a752806102f6528061038052506109ad6000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c8063402e1abf1461005c5780638c86f1e4146100a05780639e8d48d0146100e8578063c45a0155146100f0578063c640752d14610114575b600080fd5b6100826004803603602081101561007257600080fd5b50356001600160a01b0316610144565b60408051938452602084019290925282820152519081900360600190f35b6100d6600480360360608110156100b657600080fd5b506001600160a01b03813581169160208101359160409091013516610165565b60408051918252519081900360200190f35b6100d661029f565b6100f86102a5565b604080516001600160a01b039092168252519081900360200190f35b6101426004803603604081101561012a57600080fd5b506001600160a01b03813581169160200135166102c9565b005b60006020819052908152604090208054600182015460029092015490919083565b6000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03166368942ce486856040518363ffffffff1660e01b815260040180836001600160a01b03168152602001826001600160a01b031681526020019250505060206040518083038186803b1580156101e657600080fd5b505afa1580156101fa573d6000803e3d6000fd5b505050506040513d602081101561021057600080fd5b50516001600160a01b03811660009081526020819052604081208054929350914203908061023d856104c9565b5091509150600061024e8a89610698565b509050896001600160a01b0316816001600160a01b031614156102885761027b856001015484868c610776565b9650505050505050610298565b61027b856002015483868c610776565b9392505050565b61070881565b7f000000000000000000000000000000000000000000000000000000000000000081565b6040805163e6a4390560e01b81526001600160a01b038481166004830152838116602483015291516000927f0000000000000000000000000000000000000000000000000000000000000000169163e6a43905916044808301926020929190829003018186803b15801561033c57600080fd5b505afa158015610350573d6000803e3d6000fd5b505050506040513d602081101561036657600080fd5b50516001600160a01b0316141561037c576104c5565b60007f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03166368942ce484846040518363ffffffff1660e01b815260040180836001600160a01b03168152602001826001600160a01b031681526020019250505060206040518083038186803b1580156103fc57600080fd5b505afa158015610410573d6000803e3d6000fd5b505050506040513d602081101561042657600080fd5b50516001600160a01b0381166000908152602081905260409020805491925090420361070881101561049f576040805162461bcd60e51b815260206004820152601e60248201527f4d4445584f7261636c653a20504552494f445f4e4f545f454c41505345440000604482015290519081900360640190fd5b6000806104ab856104c9565b504286556001860191909155600290940193909355505050505b5050565b60008060006104d66107cd565b9050836001600160a01b0316635909c0d56040518163ffffffff1660e01b815260040160206040518083038186803b15801561051157600080fd5b505afa158015610525573d6000803e3d6000fd5b505050506040513d602081101561053b57600080fd5b505160408051635a3d549360e01b815290519194506001600160a01b03861691635a3d549391600480820192602092909190829003018186803b15801561058157600080fd5b505afa158015610595573d6000803e3d6000fd5b505050506040513d60208110156105ab57600080fd5b505160408051630240bc6b60e21b81529051919350600091829182916001600160a01b03891691630902f1ac916004808301926060929190829003018186803b1580156105f757600080fd5b505afa15801561060b573d6000803e3d6000fd5b505050506040513d606081101561062157600080fd5b5080516020820151604090920151909450909250905063ffffffff8082169085161461068e5780840363ffffffff811661065b84866107d7565b516001600160e01b031602969096019563ffffffff811661067c85856107d7565b516001600160e01b0316029590950194505b5050509193909250565b600080826001600160a01b0316846001600160a01b031614156106ec5760405162461bcd60e51b81526004018080602001828103825260238152602001806109326023913960400191505060405180910390fd5b826001600160a01b0316846001600160a01b03161061070c57828461070f565b83835b90925090506001600160a01b03821661076f576040805162461bcd60e51b815260206004820152601c60248201527f50616e63616b654c6962726172793a205a45524f5f4144445245535300000000604482015290519081900360640190fd5b9250929050565b6000806040518060200160405280858888038161078f57fe5b046001600160e01b0316905290506107af6107aa8285610887565b610905565b71ffffffffffffffffffffffffffffffffffff169695505050505050565b63ffffffff421690565b6107df61090c565b6000826001600160701b03161161083d576040805162461bcd60e51b815260206004820152601760248201527f4669786564506f696e743a204449565f42595f5a45524f000000000000000000604482015290519081900360640190fd5b6040805160208101909152806001600160701b0384166dffffffffffffffffffffffffffff60701b607087901b168161087257fe5b046001600160e01b0316815250905092915050565b61088f61091e565b60008215806108b557505082516001600160e01b0316828102908382816108b257fe5b04145b6108f05760405162461bcd60e51b81526004018080602001828103825260238152602001806109556023913960400191505060405180910390fd5b60408051602081019091529081529392505050565b5160701c90565b60408051602081019091526000815290565b604051806020016040528060008152509056fe50616e63616b654c6962726172793a204944454e544943414c5f4144445245535345534669786564506f696e743a204d554c5449504c49434154494f4e5f4f564552464c4f57a264697066735822122025196a3dcdd294094994da80af254c68e18c969b02aa671302e4e87a9ea9a50b64736f6c63430007060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c8063402e1abf1461005c5780638c86f1e4146100a05780639e8d48d0146100e8578063c45a0155146100f0578063c640752d14610114575b600080fd5b6100826004803603602081101561007257600080fd5b50356001600160a01b0316610144565b60408051938452602084019290925282820152519081900360600190f35b6100d6600480360360608110156100b657600080fd5b506001600160a01b03813581169160208101359160409091013516610165565b60408051918252519081900360200190f35b6100d661029f565b6100f86102a5565b604080516001600160a01b039092168252519081900360200190f35b6101426004803603604081101561012a57600080fd5b506001600160a01b03813581169160200135166102c9565b005b60006020819052908152604090208054600182015460029092015490919083565b6000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03166368942ce486856040518363ffffffff1660e01b815260040180836001600160a01b03168152602001826001600160a01b031681526020019250505060206040518083038186803b1580156101e657600080fd5b505afa1580156101fa573d6000803e3d6000fd5b505050506040513d602081101561021057600080fd5b50516001600160a01b03811660009081526020819052604081208054929350914203908061023d856104c9565b5091509150600061024e8a89610698565b509050896001600160a01b0316816001600160a01b031614156102885761027b856001015484868c610776565b9650505050505050610298565b61027b856002015483868c610776565b9392505050565b61070881565b7f000000000000000000000000000000000000000000000000000000000000000081565b6040805163e6a4390560e01b81526001600160a01b038481166004830152838116602483015291516000927f0000000000000000000000000000000000000000000000000000000000000000169163e6a43905916044808301926020929190829003018186803b15801561033c57600080fd5b505afa158015610350573d6000803e3d6000fd5b505050506040513d602081101561036657600080fd5b50516001600160a01b0316141561037c576104c5565b60007f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03166368942ce484846040518363ffffffff1660e01b815260040180836001600160a01b03168152602001826001600160a01b031681526020019250505060206040518083038186803b1580156103fc57600080fd5b505afa158015610410573d6000803e3d6000fd5b505050506040513d602081101561042657600080fd5b50516001600160a01b0381166000908152602081905260409020805491925090420361070881101561049f576040805162461bcd60e51b815260206004820152601e60248201527f4d4445584f7261636c653a20504552494f445f4e4f545f454c41505345440000604482015290519081900360640190fd5b6000806104ab856104c9565b504286556001860191909155600290940193909355505050505b5050565b60008060006104d66107cd565b9050836001600160a01b0316635909c0d56040518163ffffffff1660e01b815260040160206040518083038186803b15801561051157600080fd5b505afa158015610525573d6000803e3d6000fd5b505050506040513d602081101561053b57600080fd5b505160408051635a3d549360e01b815290519194506001600160a01b03861691635a3d549391600480820192602092909190829003018186803b15801561058157600080fd5b505afa158015610595573d6000803e3d6000fd5b505050506040513d60208110156105ab57600080fd5b505160408051630240bc6b60e21b81529051919350600091829182916001600160a01b03891691630902f1ac916004808301926060929190829003018186803b1580156105f757600080fd5b505afa15801561060b573d6000803e3d6000fd5b505050506040513d606081101561062157600080fd5b5080516020820151604090920151909450909250905063ffffffff8082169085161461068e5780840363ffffffff811661065b84866107d7565b516001600160e01b031602969096019563ffffffff811661067c85856107d7565b516001600160e01b0316029590950194505b5050509193909250565b600080826001600160a01b0316846001600160a01b031614156106ec5760405162461bcd60e51b81526004018080602001828103825260238152602001806109326023913960400191505060405180910390fd5b826001600160a01b0316846001600160a01b03161061070c57828461070f565b83835b90925090506001600160a01b03821661076f576040805162461bcd60e51b815260206004820152601c60248201527f50616e63616b654c6962726172793a205a45524f5f4144445245535300000000604482015290519081900360640190fd5b9250929050565b6000806040518060200160405280858888038161078f57fe5b046001600160e01b0316905290506107af6107aa8285610887565b610905565b71ffffffffffffffffffffffffffffffffffff169695505050505050565b63ffffffff421690565b6107df61090c565b6000826001600160701b03161161083d576040805162461bcd60e51b815260206004820152601760248201527f4669786564506f696e743a204449565f42595f5a45524f000000000000000000604482015290519081900360640190fd5b6040805160208101909152806001600160701b0384166dffffffffffffffffffffffffffff60701b607087901b168161087257fe5b046001600160e01b0316815250905092915050565b61088f61091e565b60008215806108b557505082516001600160e01b0316828102908382816108b257fe5b04145b6108f05760405162461bcd60e51b81526004018080602001828103825260238152602001806109556023913960400191505060405180910390fd5b60408051602081019091529081529392505050565b5160701c90565b60408051602081019091526000815290565b604051806020016040528060008152509056fe50616e63616b654c6962726172793a204944454e544943414c5f4144445245535345534669786564506f696e743a204d554c5449504c49434154494f4e5f4f564552464c4f57a264697066735822122025196a3dcdd294094994da80af254c68e18c969b02aa671302e4e87a9ea9a50b64736f6c63430007060033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 11831,
+        "contract": "contracts/swapmining/Oracle.sol:Oracle",
+        "label": "pairObservations",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_struct(Observation)11822_storage)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_struct(Observation)11822_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct Oracle.Observation)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Observation)11822_storage"
+      },
+      "t_struct(Observation)11822_storage": {
+        "encoding": "inplace",
+        "label": "struct Oracle.Observation",
+        "members": [
+          {
+            "astId": 11817,
+            "contract": "contracts/swapmining/Oracle.sol:Oracle",
+            "label": "timestamp",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 11819,
+            "contract": "contracts/swapmining/Oracle.sol:Oracle",
+            "label": "price0Cumulative",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 11821,
+            "contract": "contracts/swapmining/Oracle.sol:Oracle",
+            "label": "price1Cumulative",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "96"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
