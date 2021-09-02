@@ -141,10 +141,8 @@ contract MasterChef is SafeOwnable, ReentrancyGuard {
         }
         uint256 multiplier = getMultiplier(pool.lastRewardBlock, block.number);
         uint256 rewardReward = multiplier.mul(rewardPerBlock).mul(pool.allocPoint).div(totalAllocPoint);
-        bool res = rewardToken.mint(rewardReward);
-        if (res) {
-            pool.accGIBXPerShare = pool.accGIBXPerShare.add(rewardReward.mul(1e12).div(lpSupply));
-        }
+        rewardReward = rewardToken.mint(rewardReward);
+        pool.accGIBXPerShare = pool.accGIBXPerShare.add(rewardReward.mul(1e12).div(lpSupply));
         pool.lastRewardBlock = block.number;
     }
 
@@ -197,6 +195,10 @@ contract MasterChef is SafeOwnable, ReentrancyGuard {
     }
 
     function safeGIBXTransfer(address _to, uint256 _amount) internal {
+        uint currentBalance = IERC20(rewardToken).balanceOf(address(this));
+        if (currentBalance < _amount) {
+            _amount = currentBalance;
+        }
         IERC20(rewardToken).safeTransfer(_to, _amount);
     }
 

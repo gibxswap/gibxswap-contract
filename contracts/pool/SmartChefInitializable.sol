@@ -132,8 +132,10 @@ contract SmartChefInitializable is SafeOwnable, ReentrancyGuard, Initializable {
         }
 
         if (_amount > 0) {
-            user.amount = user.amount.add(_amount);
+            uint balanceBefore = stakedToken.balanceOf(address(this));
             stakedToken.safeTransferFrom(address(msg.sender), address(this), _amount);
+            uint balanceAfter = stakedToken.balanceOf(address(this));
+            user.amount = user.amount.add(balanceAfter.sub(balanceBefore));
         }
 
         user.rewardDebt = user.amount.mul(accTokenPerShare).div(PRECISION_FACTOR);
@@ -276,9 +278,9 @@ contract SmartChefInitializable is SafeOwnable, ReentrancyGuard, Initializable {
         uint256 stakedTokenSupply = stakedToken.balanceOf(address(this));
         if (block.number > lastRewardBlock && stakedTokenSupply != 0) {
             uint256 multiplier = _getMultiplier(lastRewardBlock, block.number);
-            uint256 cakeReward = multiplier.mul(rewardPerBlock);
+            uint256 reward = multiplier.mul(rewardPerBlock);
             uint256 adjustedTokenPerShare =
-                accTokenPerShare.add(cakeReward.mul(PRECISION_FACTOR).div(stakedTokenSupply));
+                accTokenPerShare.add(reward.mul(PRECISION_FACTOR).div(stakedTokenSupply));
             return user.amount.mul(adjustedTokenPerShare).div(PRECISION_FACTOR).sub(user.rewardDebt);
         } else {
             return user.amount.mul(accTokenPerShare).div(PRECISION_FACTOR).sub(user.rewardDebt);
@@ -301,8 +303,8 @@ contract SmartChefInitializable is SafeOwnable, ReentrancyGuard, Initializable {
         }
 
         uint256 multiplier = _getMultiplier(lastRewardBlock, block.number);
-        uint256 cakeReward = multiplier.mul(rewardPerBlock);
-        accTokenPerShare = accTokenPerShare.add(cakeReward.mul(PRECISION_FACTOR).div(stakedTokenSupply));
+        uint256 reward = multiplier.mul(rewardPerBlock);
+        accTokenPerShare = accTokenPerShare.add(reward.mul(PRECISION_FACTOR).div(stakedTokenSupply));
         lastRewardBlock = block.number;
     }
 

@@ -9,7 +9,7 @@ import "../token/GIBXToken.sol";
 contract GIBXBar is ERC20('GIBXBar Token', 'FBAR'), Ownable {
     using SafeMath for uint256;
 
-    GIBXToken public fly;
+    GIBXToken public gibx;
 
     function mint(address _to, uint256 _amount) external onlyOwner {
         _mint(_to, _amount);
@@ -19,9 +19,9 @@ contract GIBXBar is ERC20('GIBXBar Token', 'FBAR'), Ownable {
         _burn(_from, _amount);
     }
 
-    constructor(GIBXToken _fly) {
-        require(address(_fly) != address(0), "illegal fly");
-        fly = _fly;
+    constructor(GIBXToken _gibx) {
+        require(address(_gibx) != address(0), "illegal gibx");
+        gibx = _gibx;
     }
 
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual override {
@@ -29,11 +29,11 @@ contract GIBXBar is ERC20('GIBXBar Token', 'FBAR'), Ownable {
     }
 
     function safeGIBXTransfer(address _to, uint256 _amount) external onlyOwner {
-        uint256 flyBal = fly.balanceOf(address(this));
-        if (_amount > flyBal) {
-            fly.transfer(_to, flyBal);
+        uint256 gibxBal = gibx.balanceOf(address(this));
+        if (_amount > gibxBal) {
+            gibx.transfer(_to, gibxBal);
         } else {
-            fly.transfer(_to, _amount);
+            gibx.transfer(_to, _amount);
         }
     }
 

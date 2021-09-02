@@ -36,16 +36,16 @@ contract GIBXToken is ERC20Capped, SafeOwnable {
         _;
     }
 
-    function mint(uint256 amount) external onlyMinter returns (bool) {
+    function mint(uint256 amount) external onlyMinter returns (uint) {
         return mintFor(msg.sender, amount);
     }
 
-    function mintFor(address to, uint256 amount) public onlyMinter returns (bool) {
+    function mintFor(address to, uint256 amount) public onlyMinter returns (uint) {
         if (amount > MAX_SUPPLY.sub(totalSupply())) {
-            return false;
+            return 0;
         }
         _mint(to, amount);
-        return true; 
+        return amount; 
     }
 
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual override {

@@ -26,7 +26,7 @@ contract PoolChef is SafeOwnable, ReentrancyGuard {
         uint256 accGIBXPerShare; // Accumulated CAKEs per share, times 1e12. See below.
     }
 
-    GIBXToken public fly;
+    GIBXToken public rewardToken;
     GIBXBar public bar;
     uint256 public rewardPerBlock;
     uint256 public BONUS_MULTIPLIER = 1;
@@ -43,12 +43,12 @@ contract PoolChef is SafeOwnable, ReentrancyGuard {
     event EmergencyWithdraw(address indexed user, uint256 indexed pid, uint256 amount);
 
     constructor(
-        GIBXToken _fly,
+        GIBXToken _rewardToken,
         GIBXBar _bar,
         uint256 _rewardPerBlock,
         uint256 _startBlock
     ) {
-        fly = _fly;
+        rewardToken = _rewardToken;
         bar = _bar;
         rewardPerBlock = _rewardPerBlock;
         startBlock = _startBlock;
@@ -107,8 +107,8 @@ contract PoolChef is SafeOwnable, ReentrancyGuard {
         uint256 tokenSupply = pool.token.balanceOf(address(this));
         if (block.number > pool.lastRewardBlock && tokenSupply != 0) {
             uint256 multiplier = getMultiplier(pool.lastRewardBlock, block.number);
-            uint256 flyReward = multiplier.mul(rewardPerBlock).mul(pool.allocPoint).div(totalAllocPoint);
-            accGIBXPerShare = accGIBXPerShare.add(flyReward.mul(1e12).div(tokenSupply));
+            uint256 reward = multiplier.mul(rewardPerBlock).mul(pool.allocPoint).div(totalAllocPoint);
+            accGIBXPerShare = accGIBXPerShare.add(reward.mul(1e12).div(tokenSupply));
         }
         return user.amount.mul(accGIBXPerShare).div(1e12).sub(user.rewardDebt);
     }
@@ -131,11 +131,9 @@ contract PoolChef is SafeOwnable, ReentrancyGuard {
             return;
         }
         uint256 multiplier = getMultiplier(pool.lastRewardBlock, block.number);
-        uint256 flyReward = multiplier.mul(rewardPerBlock).mul(pool.allocPoint).div(totalAllocPoint);
-        bool res = fly.mintFor(address(bar), flyReward);
-        if (res) {
-            pool.accGIBXPerShare = pool.accGIBXPerShare.add(flyReward.mul(1e12).div(tokenSupply));
-        }
+        uint256 reward = multiplier.mul(rewardPerBlock).mul(pool.allocPoint).div(totalAllocPoint);
+        reward = rewardToken.mintFor(address(bar), reward);
+        pool.accGIBXPerShare = pool.accGIBXPerShare.add(reward.mul(1e12).div(tokenSupply));
         pool.lastRewardBlock = block.number;
     }
 
@@ -155,11 +153,13 @@ contract PoolChef is SafeOwnable, ReentrancyGuard {
             }
         }
         if (_amount > 0) {
+            uint balanceBefore = pool.token.balanceOf(address(this));
             pool.token.safeTransferFrom(address(msg.sender), address(this), _amount);
-            user.amount = user.amount.add(_amount);
+            uint balanceAfter = pool.token.balanceOf(address(this));
+            user.amount = user.amount.add(balanceAfter.sub(balanceBefore));
         }
         user.rewardDebt = user.amount.mul(pool.accGIBXPerShare).div(1e12);
-        if (pool.token == fly) {
+        if (pool.token == rewardToken) {
             bar.mint(msg.sender, _amount);
         }
         emit Deposit(msg.sender, _pid, _amount);
@@ -180,7 +180,7 @@ contract PoolChef is SafeOwnable, ReentrancyGuard {
             pool.token.safeTransfer(address(msg.sender), _amount);
         }
         user.rewardDebt = user.amount.mul(pool.accGIBXPerShare).div(1e12);
-        if (pool.token == fly) {
+        if (pool.token == rewardToken) {
             bar.burn(msg.sender, _amount);
         }
         emit Withdraw(msg.sender, _pid, _amount);
@@ -194,7 +194,7 @@ contract PoolChef is SafeOwnable, ReentrancyGuard {
         user.amount = 0;
         user.rewardDebt = 0;
         pool.token.safeTransfer(address(msg.sender), amount);
-        if (pool.token == fly) {
+        if (pool.token == rewardToken) {
             bar.burn(msg.sender, amount);
         }
         emit EmergencyWithdraw(msg.sender, _pid, amount);

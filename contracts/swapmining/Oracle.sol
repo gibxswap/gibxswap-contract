@@ -37,7 +37,7 @@ contract Oracle {
 
         Observation storage observation = pairObservations[pair];
         uint timeElapsed = block.timestamp - observation.timestamp;
-        require(timeElapsed >= CYCLE, 'MDEXOracle: PERIOD_NOT_ELAPSED');
+        require(timeElapsed >= CYCLE, 'Oracle: PERIOD_NOT_ELAPSED');
         (uint price0Cumulative, uint price1Cumulative,) = OracleLibrary.currentCumulativePrices(pair);
         observation.timestamp = block.timestamp;
         observation.price0Cumulative = price0Cumulative;

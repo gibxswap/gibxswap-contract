@@ -19,7 +19,7 @@ contract SwapMining is SafeOwnable {
     EnumerableSet.AddressSet private _whitelist;
 
     // GIBX tokens created per block
-    uint256 public flyPerBlock;
+    uint256 public rewardPerBlock;
     // The block number when GIBX mining starts.
     uint256 public startBlock;
     // How many blocks are halved
@@ -31,7 +31,7 @@ contract SwapMining is SafeOwnable {
     address public router;
     // factory address
     IGIBXFactory public factory;
-    // flytoken address
+    // token address
     GIBXToken public vdrToken;
     // Calculate price based on BUSD
     address public targetToken;
@@ -44,7 +44,7 @@ contract SwapMining is SafeOwnable {
         IOracle _oracle,
         address _router,
         address _targetToken,
-        uint256 _flyPerBlock,
+        uint256 _rewardPerBlock,
         uint256 _startBlock
     ) {
         require(address(_vdrToken) != address(0), "illegal address");
@@ -56,7 +56,7 @@ contract SwapMining is SafeOwnable {
         require(_router != address(0), "illegal address");
         router = _router;
         targetToken = _targetToken;
-        flyPerBlock = _flyPerBlock;
+        rewardPerBlock = _rewardPerBlock;
         startBlock = _startBlock;
     }
 
@@ -110,10 +110,10 @@ contract SwapMining is SafeOwnable {
         poolInfo[_pid].allocPoint = _allocPoint;
     }
 
-    // Set the number of fly produced by each block
+    // Set the number of token produced by each block
     function setGIBXPerBlock(uint256 _newPerBlock) public onlyOwner {
         massMintPools();
-        flyPerBlock = _newPerBlock;
+        rewardPerBlock = _newPerBlock;
     }
 
     // Only tokens in the whitelist can be mined GIBX
@@ -171,7 +171,7 @@ contract SwapMining is SafeOwnable {
 
     function reward(uint256 blockNumber) public view returns (uint256) {
         uint256 _phase = phase(blockNumber);
-        return flyPerBlock.div(2 ** _phase);
+        return rewardPerBlock.div(2 ** _phase);
     }
 
     function reward() public view returns (uint256) {
