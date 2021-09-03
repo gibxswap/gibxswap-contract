@@ -156,7 +156,8 @@ contract PoolChef is SafeOwnable, ReentrancyGuard {
             uint balanceBefore = pool.token.balanceOf(address(this));
             pool.token.safeTransferFrom(address(msg.sender), address(this), _amount);
             uint balanceAfter = pool.token.balanceOf(address(this));
-            user.amount = user.amount.add(balanceAfter.sub(balanceBefore));
+            _amount = balanceAfter.sub(balanceBefore);
+            user.amount = user.amount.add(_amount);
         }
         user.rewardDebt = user.amount.mul(pool.accGIBXPerShare).div(1e12);
         if (pool.token == rewardToken) {

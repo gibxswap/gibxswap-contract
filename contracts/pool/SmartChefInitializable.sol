@@ -135,7 +135,8 @@ contract SmartChefInitializable is SafeOwnable, ReentrancyGuard, Initializable {
             uint balanceBefore = stakedToken.balanceOf(address(this));
             stakedToken.safeTransferFrom(address(msg.sender), address(this), _amount);
             uint balanceAfter = stakedToken.balanceOf(address(this));
-            user.amount = user.amount.add(balanceAfter.sub(balanceBefore));
+            _amount = balanceAfter.sub(balanceBefore);
+            user.amount = user.amount.add(_amount);
         }
 
         user.rewardDebt = user.amount.mul(accTokenPerShare).div(PRECISION_FACTOR);
