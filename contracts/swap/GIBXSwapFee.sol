@@ -62,8 +62,7 @@ contract GIBXSwapFee is SafeOwnable, Initializable {
     }
 
     function transferToVault(address token, uint balance) internal returns (uint balanceRemained) {
-        //uint balanceUsed = balance.mul(1).div(2); //1/2
-        uint balanceUsed = balance.div(2); //1/2
+        uint balanceUsed = balance.mul(2).div(3); //1/2
         balanceRemained = balance.sub(balanceUsed);
         SafeERC20.safeTransfer(IERC20(token), vault, balanceUsed);
     }

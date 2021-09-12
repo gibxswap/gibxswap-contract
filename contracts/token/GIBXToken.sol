@@ -13,7 +13,7 @@ contract GIBXToken is ERC20Capped, SafeOwnable {
     uint256 public constant MAX_SUPPLY = 1 * 10 ** 9 * 10 ** 18;
     mapping(address => bool) public minters;
 
-    constructor() ERC20Capped(MAX_SUPPLY) ERC20("GDX", "GDX") {
+    constructor() ERC20Capped(MAX_SUPPLY) ERC20("GIBX Swap", "X") {
         addMinter(msg.sender);
     }
 
