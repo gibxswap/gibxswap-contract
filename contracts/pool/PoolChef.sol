@@ -32,8 +32,8 @@ contract PoolChef is SafeOwnable, ReentrancyGuard {
     uint256 public BONUS_MULTIPLIER = 1;
 
     PoolInfo[] public poolInfo;
-    mapping(address => uint256) pidOfToken;
-    mapping(address => bool) existToken;
+    mapping(address => uint256) public pidOfToken;
+    mapping(address => bool) public existToken;
     mapping (uint256 => mapping (address => UserInfo)) public userInfo;
     uint256 public totalAllocPoint = 0;
     uint256 public startBlock;

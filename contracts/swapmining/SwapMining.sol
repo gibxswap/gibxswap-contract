@@ -32,14 +32,14 @@ contract SwapMining is SafeOwnable {
     // factory address
     IGIBXFactory public factory;
     // token address
-    GIBXToken public vdrToken;
+    GIBXToken public rewardToken;
     // Calculate price based on BUSD
     address public targetToken;
     // pair corresponding pid
     mapping(address => uint256) public pairOfPid;
 
     constructor(
-        GIBXToken _vdrToken,
+        GIBXToken _rewardToken,
         IGIBXFactory _factory,
         IOracle _oracle,
         address _router,
@@ -47,8 +47,8 @@ contract SwapMining is SafeOwnable {
         uint256 _rewardPerBlock,
         uint256 _startBlock
     ) {
-        require(address(_vdrToken) != address(0), "illegal address");
-        vdrToken = _vdrToken;
+        require(address(_rewardToken) != address(0), "illegal address");
+        rewardToken = _rewardToken;
         require(address(_factory) != address(0), "illegal address");
         factory = _factory;
         require(address(_oracle) != address(0), "illegal address");
@@ -305,7 +305,7 @@ contract SwapMining is SafeOwnable {
             return;
         }
         console.log(userSub);
-        vdrToken.transfer(msg.sender, userSub);
+        rewardToken.transfer(msg.sender, userSub);
     }
 
     // Get rewards from users in the current pool
@@ -342,10 +342,10 @@ contract SwapMining is SafeOwnable {
     }
 
     function safeGIBXTransfer(address _to, uint256 _amount) internal {
-        uint256 balance = vdrToken.balanceOf(address(this));
+        uint256 balance = rewardToken.balanceOf(address(this));
         if (_amount > balance) {
             _amount = balance;
         }
-        vdrToken.transfer(_to, _amount);
+        rewardToken.transfer(_to, _amount);
     }
 }

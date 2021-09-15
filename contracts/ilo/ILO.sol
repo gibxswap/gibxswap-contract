@@ -29,7 +29,8 @@ contract ILO is SafeOwnable {
     uint256 public totalAllocPoint = 0;
     uint256 public startBlock;
     uint256 public endBlock;
-    
+    //for debug
+    /* 
     function setStartBlock(uint256 blockNumber) public onlyOwner {
         startBlock = blockNumber;
     }
@@ -37,7 +38,7 @@ contract ILO is SafeOwnable {
     function setEndBlock(uint256 blockNumber) public onlyOwner {
         endBlock = blockNumber;
     }
-    
+    */ 
     event Deposit(address indexed user, uint256 indexed pid, uint256 amount);
     event Withdraw(address indexed user, uint256 indexed pid, uint256 amount);
     event Claim(address indexed user, uint256 indexed pid, uint256 amount);
